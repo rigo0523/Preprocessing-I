@@ -270,9 +270,20 @@ html,
 body {
   height: 100%;
 }
+.flexing {
+  display: flex;
+}
+.flexingColumn {
+  display: flex;
+  flex-direction: column;
+}
+/*-------------------------- MIXING------------------------------ */
+/*-------------------------- 2 VARIABLES------------------------------ */
+/*-------------------------- 2 VARIABLES------------------------------ */
 .container {
   /* CONTAINER PAGE */
-  width: 1200px;
+  width: 960px;
+  /*-------------------------- MIXING------------------------------ */
   margin: 0 auto;
   /*NAVICATION BAR*/
   /*END OF NAVICATION BAR */
@@ -286,9 +297,14 @@ body {
   /* END OF PORTFOLIO SECTION */
   /* FOOTER CONTACT ME SECTION */
 }
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
 .container header {
   /* HEADER CHILD 2*/
-  display: flex;
+  display: [object Object];
   justify-content: space-between;
   align-items: center;
   background: white;
@@ -298,10 +314,19 @@ body {
   top: 0;
   z-index: 100;
   box-shadow: 0px 10px 23px #111;
+  /*-------------------------- MIXING------------------------------ */
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    position: static;
+  }
+}
 .container header .myname {
-  /* BUTTON GRANDCHILD */
   font-size: 20px;
   padding: 10px 60px;
   cursor: pointer;
@@ -316,24 +341,56 @@ body {
   background: white;
   color: #42A5F5;
 }
+@media (max-width: 500px) {
+  .container header .myname {
+    margin: 0;
+  }
+}
 .container nav {
   padding: 30px 0;
 }
+@media (max-width: 500px) {
+  .container nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .container nav a {
-  color: #43A5F5;
+  color: #42A5F5;
   text-decoration: none;
   font-size: 25px;
   margin-left: 80px;
 }
+@media (max-width: 500px) {
+  .container nav a {
+    width: 100%;
+    margin: 0;
+    Text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 15px 10px -15px #111;
+  }
+}
 .container nav a:last-child {
   margin-right: 20px;
+}
+@media (max-width: 500px) {
+  .container nav a:last-child {
+    margin: 0;
+  }
 }
 .container nav a:hover {
   color: gray;
 }
+@media (max-width: 500px) {
+  .container nav a:hover {
+    background: #42A5F5;
+    color: white;
+  }
+}
 .container .background-image {
   /* parent */
-  width: 1200px;
+  width: 960px;
   height: 82vh;
   background: url(/img/tunnel-view.jpg) no-repeat;
   background-size: cover;
@@ -342,6 +399,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 500px) {
+  .container .background-image {
+    width: 100%;
+    height: 90vh;
+  }
 }
 .container .background-image .info-content {
   content: "";
@@ -352,6 +415,7 @@ body {
 .container .background-image .info-content .name-intro {
   font-size: 65px;
   margin-top: 150px;
+  margin-left: 10px;
   color: white;
   text-align: center;
   line-height: 1.2em;
@@ -364,7 +428,9 @@ body {
   color: white;
   font-size: 21px;
   text-align: center;
-  margin: 50px 0;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .container .resume {
   font-size: 20px;
@@ -374,26 +440,26 @@ body {
   border-radius: 10px;
   background: #42A5F5;
   color: white;
-  margin: 0 auto;
+  margin-left: 370px;
 }
 .container .resume:hover {
   box-shadow: 0px 10px 23px #111;
   background: white;
   color: #42A5F5;
 }
-.container .about-me,
-.container .skills {
-  width: 100%;
-  height: 15vh;
-  margin: 0 auto;
-  border-bottom: 1px solid gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 500px) {
+  .container .resume {
+    /*-------------------------- MIXING------------------------------ */
+    margin: 0 auto;
+    margin-top: 100px;
+  }
 }
-.container .about-me h2,
-.container .skills h2 {
+.container .about-me {
+  width: 100%;
+  border-bottom: 1px solid gray;
   font-size: 3em;
+  padding: 30px 0;
+  text-align: center;
 }
 .container .biography {
   width: 100%;
@@ -403,39 +469,77 @@ body {
   padding-bottom: 100px;
   border-bottom: 1px solid gray;
 }
+@media (max-width: 500px) {
+  .container .biography {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+  }
+}
 .container .biography .myinformation {
   width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+@media (max-width: 500px) {
+  .container .biography .myinformation {
+    width: 100%;
+    padding: 10px 1px;
+    font-size: 70%;
+  }
 }
 .container .storyofmylife1 {
-  font-size: 2.5em;
-  padding: 0 20px;
+  font-size: 2em;
+  padding: 0 20px
+	width: 100%;
+}
+@media (max-width: 500px) {
+  .container .storyofmylife1 {
+    width: 100%;
+  }
 }
 .container .myphoto {
-  width: 50%;
-  display: block;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .container .myphoto {
+    width: 30%;
+  }
 }
 .container .myphoto .myphotonavy {
   height: 550px;
-  width: 200%;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .container .myphoto .myphotonavy {
+    width: 200%;
+    margin-left: 100px;
+  }
 }
 .container .portfolio {
   width: 100%;
   display: flex;
   border-radius: 1px;
   justify-content: center;
-  background: skyblue;
+  background: #42A5F5;
   align-items: center;
   box-shadow: 0px 10px 23px #111;
 }
 .container .portfolio h2 {
-  font-size: 5em;
+  font-size: 3em;
   padding: 90px 0;
+}
+@media (max-width: 500px) {
+  .container .portfolio h2 {
+    font-size: 2em;
+  }
 }
 .container footer {
   width: 100%;
   border-top: 1px solid black;
   background: white;
-  color: #43A5F5;
+  color: #42A5F5;
   margin-top: 100px;
   padding: 40px 0;
   box-shadow: 1px -15px 60px -19px #111;
@@ -445,9 +549,20 @@ body {
   text-align: center;
   background: white;
 }
+@media (max-width: 500px) {
+  .container footer .contact {
+    font-size: 3em;
+    padding: 10px 0;
+  }
+}
 .container .email {
   text-align: center;
   font-size: 2em;
   color: black;
+}
+@media (max-width: 500px) {
+  .container .email {
+    font-size: 1em;
+  }
 }
 /* END OF FOOTER SECTION */

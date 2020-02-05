@@ -111,10 +111,12 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
-.center-container() {
+
+
+.center-container() {/*-------------------------- MIXING------------------------------ */
 	margin: 0 auto;
 }
 
@@ -124,27 +126,49 @@ html, body {
 	cursor: pointer;
 	display: block;
 	border-radius: 10px;
-	background: #42A5F5;
-	color: white;
+	background: @backgroundSkyBlue;
+	color: @colorwhite;
 
 		&:hover {
 		box-shadow: 0px 10px 23px #111; 
-		background: white;
-		color: #42A5F5;
+		background: @colorwhite;
+		color: @backgroundSkyBlue;
 		}
+} 
+
+.flexing {
+	display: flex;
+} 
+
+.flexingColumn {
+	display: flex;
+	flex-direction: column;
 }
+
+/*-------------------------- MIXING------------------------------ */
+
+
+
+/*-------------------------- 2 VARIABLES------------------------------ */
+
+@backgroundSkyBlue: #42A5F5;
+@colorwhite: white;
+
+/*-------------------------- 2 VARIABLES------------------------------ */
 
 
 .container { /* CONTAINER PAGE */
-	width: 1200px;
+	width: 960px;
 	.center-container();
-	
+	@media (max-width: 500px) {
+		width: 100%;
+	}
 
 header { /* HEADER CHILD 2*/
-	display: flex;
+	display: .flexing();
 	justify-content: space-between;
 	align-items: center;
-	background: white;
+	background: @colorwhite;
 	width: 100%;
 	position: sticky;
 	position: -webkit-sticky;
@@ -152,12 +176,19 @@ header { /* HEADER CHILD 2*/
 	z-index: 100;
 	box-shadow: 0px 10px 23px #111; 
 	.center-container();
-	
+	@media (max-width: 500px) {
+		width: 100%;
+		.flexingColumn();
+		box-shadow: none;
+		position: static;
+	} // this closes the media query for the header section 
 		
-.myname { /* BUTTON GRANDCHILD */
+.myname { 
 		.button();
 		margin-left: 20px;
-	
+		@media (max-width: 500px) {
+			margin: 0;
+		} //this closes media query for button with RIGO name
 	}
 }
 
@@ -165,19 +196,37 @@ header { /* HEADER CHILD 2*/
 	/*NAVICATION BAR*/
 nav {
 	padding: 30px 0;
+	@media (max-width: 500px) {
+		.flexingColumn();
+		width: 100%;
+	} // this closes media query for nav bar
 
 		a {
-			color: #43A5F5;
+			color: @backgroundSkyBlue;
 			text-decoration: none;
 			font-size: 25px;
 			margin-left: 80px;
+			@media (max-width: 500px) {
+				width: 100%;
+				margin: 0;
+				Text-align: center;
+				padding: 20px 0;
+				box-shadow: 0px 15px 10px -15px #111; 
+				} // this closes media query for anchor tag
 			
 			&:last-child {
 				margin-right: 20px;
+				@media (max-width: 500px) {
+					margin: 0;
+				} // this closes media query for last anchor tag 
 			}
 
 			&:hover {
 			color: gray;
+			@media (max-width: 500px) {
+				background: @backgroundSkyBlue;
+				color: @colorwhite
+				} // this closes media query on hover effect
 			}	
 			
 		}
@@ -187,7 +236,7 @@ nav {
   /* BACKGROUND IMAGE SECTION */
 
 .background-image { /* parent */
-	width: 1200px;
+	width: 960px;
 	height: 82vh;
 	background: url(/img/tunnel-view.jpg) no-repeat;
 	background-size: cover;
@@ -196,6 +245,10 @@ nav {
     display: flex; 
     justify-content: center;
 	align-items: center;
+	@media (max-width: 500px) {
+		width: 100%;	
+		height: 90vh;	
+	} //this closes media query for background image
 
 	
 
@@ -207,7 +260,8 @@ nav {
 			.name-intro { 
 			font-size: 65px;
 			margin-top: 150px;
-			color: white;
+			margin-left: 10px;
+			color: @colorwhite;
 			text-align: center;
 			line-height: 1.2em;
 		
@@ -224,15 +278,21 @@ nav {
 
  /* FULLSTACK DEVELOPER */
 .fullstack-dev {
-	color: white;
+	color: @colorwhite;
 	font-size: 21px;
 	text-align: center;
-	margin: 50px 0;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 40px;
 }
 
 .resume {
 	.button();
-	.center-container();
+	margin-left: 370px;
+	@media (max-width: 500px) {
+		.center-container();
+		margin-top: 100px;
+	}
 }
 
 /* END OF BACKGROUND IMAGE SECTION */
@@ -240,18 +300,12 @@ nav {
 
 
 /* ABOUT ME SECTION AND SKILLS*/
-.about-me, .skills {
+.about-me {
 	width: 100%;
-	height: 15vh;	
-	.center-container();
 	border-bottom: 1px solid gray;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-h2 {
 	font-size: 3em;
-	}
+	padding: 30px 0;
+	text-align: center;
 }
 
 /* START OF BIOGRAPHY */
@@ -262,25 +316,46 @@ h2 {
 	padding-top: 100px;
 	padding-bottom: 100px;
 	border-bottom: 1px solid gray;
+	@media (max-width: 500px) {
+		.flexingColumn();	
+		padding: 30px 0;	
+	}
 	
-		.myinformation {
+	.myinformation {
 		width: 50%;
-		
+		display: flex;
+		align-items: center;
+		padding: 0 10px;
+		@media (max-width: 500px) {
+			width: 100%;
+			padding: 10px 1px;
+			font-size: 70%;
+		} // this closes media query on all divs
 	}
 }
 
 .storyofmylife1 {
-	font-size: 2.5em;
-	padding: 0 20px;
+	font-size: 2em;
+	padding: 0 20px
+	width: 100%;
+	@media (max-width: 500px) {	
+	width: 100%;
+	}
 }
 
 .myphoto {
-	width: 50%;
-	display: block;
+	width: 100%;
+	@media (max-width: 500px) {
+	width: 30%;
+	}
 	
 .myphotonavy {
 		height: 550px;
-		width: 200%;
+		width: 100%;
+		@media (max-width: 500px) {
+			width: 200%;
+			margin-left: 100px;
+		}
 	}
 }
 
@@ -292,14 +367,16 @@ h2 {
     display: flex;
     border-radius: 1px;
     justify-content: center;
-    background: skyblue;
+    background: @backgroundSkyBlue;
     align-items: center;
 	box-shadow: 0px 10px 23px #111; 
     
 		h2 {
-		font-size: 5em;
+		font-size: 3em;
 		padding: 90px 0;
-		
+		@media (max-width: 500px) {
+			font-size: 2em;	
+		}
 	}
 }
 /* END OF PORTFOLIO SECTION */
@@ -309,8 +386,8 @@ h2 {
 footer {
     width: 100%;
     border-top: 1px solid black;
-    background: white;
-    color: #43A5F5;
+    background: @colorwhite;
+    color: @backgroundSkyBlue;
     margin-top: 100px;
     padding: 40px 0;
 	box-shadow: 1px -15px 60px -19px #111;
@@ -319,7 +396,11 @@ footer {
     .contact {
     font-size: 2em;
     text-align: center;
-    background: white;
+	background: @colorwhite;
+	@media (max-width: 500px) {
+	font-size: 3em;
+	padding: 10px 0;		
+	}
     }
 }
 
@@ -327,8 +408,11 @@ footer {
 			text-align: center;
 			font-size: 2em;
 			color: black;
+			@media (max-width: 500px) {
+				font-size: 1em;
+			}
 		}
 	
-}
+} // end of container // 
 
 /* END OF FOOTER SECTION */
