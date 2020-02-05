@@ -1,4 +1,3 @@
-// Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -56,10 +55,280 @@ table {
 html, body {
     height: 100%;
 }
-.clear() {
-	background: red;
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-.mixin {
-	&:extend(.clear)
-	border: 1px solid red;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.center-container() {
+	margin: 0 auto;
+}
+
+.button() {
+	font-size: 20px;
+	padding: 10px 60px;
+	cursor: pointer;
+	display: block;
+	border-radius: 10px;
+	background: #42A5F5;
+	color: white;
+
+		&:hover {
+		box-shadow: 0px 10px 23px #111; 
+		background: white;
+		color: #42A5F5;
+		}
+}
+
+
+.container { /* CONTAINER PAGE */
+	width: 1200px;
+	.center-container();
+	
+
+header { /* HEADER CHILD 2*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: white;
+	width: 100%;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0px 10px 23px #111; 
+	.center-container();
+	
+		
+.myname { /* BUTTON GRANDCHILD */
+		.button();
+		margin-left: 20px;
+	
+	}
+}
+
+
+	/*NAVICATION BAR*/
+nav {
+	padding: 30px 0;
+
+		a {
+			color: #43A5F5;
+			text-decoration: none;
+			font-size: 25px;
+			margin-left: 80px;
+			
+			&:last-child {
+				margin-right: 20px;
+			}
+
+			&:hover {
+			color: gray;
+			}	
+			
+		}
+} /*END OF NAVICATION BAR */
+
+
+  /* BACKGROUND IMAGE SECTION */
+
+.background-image { /* parent */
+	width: 1200px;
+	height: 82vh;
+	background: url(/img/tunnel-view.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+    display: flex; 
+    justify-content: center;
+	align-items: center;
+
+	
+
+.info-content {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			.name-intro { 
+			font-size: 65px;
+			margin-top: 150px;
+			color: white;
+			text-align: center;
+			line-height: 1.2em;
+		
+
+					.period { 
+						color: blue;
+						font-size: 120px;
+					}
+				
+			}
+		}
+	
+} 
+
+ /* FULLSTACK DEVELOPER */
+.fullstack-dev {
+	color: white;
+	font-size: 21px;
+	text-align: center;
+	margin: 50px 0;
+}
+
+.resume {
+	.button();
+	.center-container();
+}
+
+/* END OF BACKGROUND IMAGE SECTION */
+
+
+
+/* ABOUT ME SECTION AND SKILLS*/
+.about-me, .skills {
+	width: 100%;
+	height: 15vh;	
+	.center-container();
+	border-bottom: 1px solid gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+h2 {
+	font-size: 3em;
+	}
+}
+
+/* START OF BIOGRAPHY */
+.biography {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	border-bottom: 1px solid gray;
+	
+		.myinformation {
+		width: 50%;
+		
+	}
+}
+
+.storyofmylife1 {
+	font-size: 2.5em;
+	padding: 0 20px;
+}
+
+.myphoto {
+	width: 50%;
+	display: block;
+	
+.myphotonavy {
+		height: 550px;
+		width: 200%;
+	}
+}
+
+/*END OF ABOUT ME AND SKILLS SECTION */
+
+/*PORTFOLI SECTION */
+.portfolio {
+    width: 100%;
+    display: flex;
+    border-radius: 1px;
+    justify-content: center;
+    background: skyblue;
+    align-items: center;
+	box-shadow: 0px 10px 23px #111; 
+    
+		h2 {
+		font-size: 5em;
+		padding: 90px 0;
+		
+	}
+}
+/* END OF PORTFOLIO SECTION */
+
+
+/* FOOTER CONTACT ME SECTION */
+footer {
+    width: 100%;
+    border-top: 1px solid black;
+    background: white;
+    color: #43A5F5;
+    margin-top: 100px;
+    padding: 40px 0;
+	box-shadow: 1px -15px 60px -19px #111;
+	
+    
+    .contact {
+    font-size: 2em;
+    text-align: center;
+    background: white;
+    }
+}
+
+		.email {
+			text-align: center;
+			font-size: 2em;
+			color: black;
+		}
+	
+}
+
+/* END OF FOOTER SECTION */
