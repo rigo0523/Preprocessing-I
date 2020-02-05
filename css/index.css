@@ -1,1 +1,453 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  /* CONTAINER PAGE */
+  width: 1200px;
+  margin: 0 auto;
+  /*NAVICATION BAR*/
+  /*END OF NAVICATION BAR */
+  /* BACKGROUND IMAGE SECTION */
+  /* FULLSTACK DEVELOPER */
+  /* END OF BACKGROUND IMAGE SECTION */
+  /* ABOUT ME SECTION AND SKILLS*/
+  /* START OF BIOGRAPHY */
+  /*END OF ABOUT ME AND SKILLS SECTION */
+  /*PORTFOLI SECTION */
+  /* END OF PORTFOLIO SECTION */
+  /* FOOTER CONTACT ME SECTION */
+}
+.container header {
+  /* HEADER CHILD 2*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  width: 100%;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 10px 23px #111;
+  margin: 0 auto;
+}
+.container header .myname {
+  /* BUTTON GRANDCHILD */
+  font-size: 20px;
+  padding: 10px 60px;
+  cursor: pointer;
+  display: block;
+  border-radius: 10px;
+  background: #42A5F5;
+  color: white;
+  margin-left: 20px;
+}
+.container header .myname:hover {
+  box-shadow: 0px 10px 23px #111;
+  background: white;
+  color: #42A5F5;
+}
+.container nav {
+  padding: 30px 0;
+}
+.container nav a {
+  color: #43A5F5;
+  text-decoration: none;
+  font-size: 25px;
+  margin-left: 80px;
+}
+.container nav a:last-child {
+  margin-right: 20px;
+}
+.container nav a:hover {
+  color: gray;
+}
+.container .background-image {
+  /* parent */
+  width: 1200px;
+  height: 82vh;
+  background: url(/img/tunnel-view.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .background-image .info-content {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.container .background-image .info-content .name-intro {
+  font-size: 65px;
+  margin-top: 150px;
+  color: white;
+  text-align: center;
+  line-height: 1.2em;
+}
+.container .background-image .info-content .name-intro .period {
+  color: blue;
+  font-size: 120px;
+}
+.container .fullstack-dev {
+  color: white;
+  font-size: 21px;
+  text-align: center;
+  margin: 50px 0;
+}
+.container .resume {
+  font-size: 20px;
+  padding: 10px 60px;
+  cursor: pointer;
+  display: block;
+  border-radius: 10px;
+  background: #42A5F5;
+  color: white;
+  margin: 0 auto;
+}
+.container .resume:hover {
+  box-shadow: 0px 10px 23px #111;
+  background: white;
+  color: #42A5F5;
+}
+.container .about-me,
+.container .skills {
+  width: 100%;
+  height: 15vh;
+  margin: 0 auto;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .about-me h2,
+.container .skills h2 {
+  font-size: 3em;
+}
+.container .biography {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid gray;
+}
+.container .biography .myinformation {
+  width: 50%;
+}
+.container .storyofmylife1 {
+  font-size: 2.5em;
+  padding: 0 20px;
+}
+.container .myphoto {
+  width: 50%;
+  display: block;
+}
+.container .myphoto .myphotonavy {
+  height: 550px;
+  width: 200%;
+}
+.container .portfolio {
+  width: 100%;
+  display: flex;
+  border-radius: 1px;
+  justify-content: center;
+  background: skyblue;
+  align-items: center;
+  box-shadow: 0px 10px 23px #111;
+}
+.container .portfolio h2 {
+  font-size: 5em;
+  padding: 90px 0;
+}
+.container footer {
+  width: 100%;
+  border-top: 1px solid black;
+  background: white;
+  color: #43A5F5;
+  margin-top: 100px;
+  padding: 40px 0;
+  box-shadow: 1px -15px 60px -19px #111;
+}
+.container footer .contact {
+  font-size: 2em;
+  text-align: center;
+  background: white;
+}
+.container .email {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+}
+/* END OF FOOTER SECTION */

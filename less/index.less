@@ -56,4 +56,10 @@ table {
 html, body {
     height: 100%;
 }
-
+.clear() {
+	background: red;
+}
+.mixin {
+	&:extend(.clear)
+	border: 1px solid red;
+}
